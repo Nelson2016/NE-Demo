@@ -1,0 +1,80 @@
+@import "../constant.scss";
+@import "../common.scss";
+
+.container {
+  .header-container {
+    background: $background-color-gray;
+    padding: 50px 0 30px 0;
+
+    img {
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    p {
+      margin-top: $margin-padding-2;
+      font-size: $font-size-2;
+      color: $font-color-gray;
+      text-align: center;
+    }
+
+    nav {
+      width: 200px;
+      margin: $margin-padding-4 auto 0 auto;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        li {
+          cursor: pointer;
+          margin: 0 $margin-padding-2;
+          color: $color-blue;
+          font-size: $font-size-2;
+          a {
+            color: inherit;
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .editor-container {
+    min-width: 500px;
+    max-width: 80%;
+    margin: $margin-padding-4 auto;
+    padding: 30px 0;
+    @include n-bottom-line;
+
+    .buttons {
+      width: 500px;
+      margin: $margin-padding-4 auto;
+      display: flex;
+      justify-content: space-around;
+      .get-content-button, .set-content-button {
+        cursor: pointer;
+        display: block;
+        width: 200px;
+        height: 35px;
+        background: $color-blue;
+        color: $font-color-white;
+        border-radius: 4px;
+        border: none;
+
+        &:hover {
+          background: $color-dark-blue;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background: $background-color-gray;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: $color-red;
+    font-size: $font-size-2;
+  }
+
+}
