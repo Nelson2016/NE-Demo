@@ -1,7 +1,7 @@
 {
-  "name": "ne-demo",
+  "name": "neleon-editor-demo",
   "version": "1.0.0",
-  "description": "NE demo.",
+  "description": "nelson-editor demo",
   "main": "index.js",
   "scripts": {
     "setup": "npm install && npm install cp-cli -g && install rimraf -g && npm install forever -g",
