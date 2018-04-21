@@ -1,5 +1,5 @@
 import React from 'react';
-import NEditor from 'ne';
+import NEditor from 'nelson-editor';
 
 const Editor = NEditor.Editor;
 const EditorStyle = NEditor.Style;
@@ -26,7 +26,7 @@ class Client extends React.Component {
      * @description 设置编辑器内容
      */
     setContent() {
-        this.editor.val('<h6>一、安装</h6><div><br></div><pre>npm install ne --save-dev</pre><p><br></p><h6>二、使用</h6><div><br></div><pre>const Editor = NEditor.Editor;<br>const EditorStyle = NEditor.Style;<br>&lt;Editor ref={e =&gt; this.editor = e}<br>&nbsp; &nbsp; &nbsp; &nbsp; uploadPictureConfig={{<br>&nbsp; &nbsp; &nbsp; &nbsp; action: \'/api/uploadPicture\',//本地图片上传地址<br>&nbsp; &nbsp; &nbsp; &nbsp; format: this.format//本地图片上传后的url格式化方法<br>&nbsp; &nbsp; &nbsp; &nbsp; }}/&gt;<br>&lt;div className={style[\'editor-container\']}&gt;<br>     &lt;article ref={e =&gt; this.showContent = e} className={EditorStyle[\'editor-container\']}&gt;<br>     &lt;/article&gt;<br>&lt;/div&gt;</pre><h5><br></h5><h6>三、API</h6><p><br></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>Editor.val(value:string) 获取/设置编辑器的值</p></blockquote><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>value为空则返回编辑器的值，不为空则设置编辑器的值。</p></blockquote>');
+        this.editor.val('<h6>一、安装</h6><div><br></div><pre>npm install ne --save-dev</pre><p><br></p><h6>二、使用</h6><h6><br></h6><pre>import NEditor from \'ne\';<br>const Editor = NEditor.Editor;<br>const EditorStyle = NEditor.Style;<br>&lt;Editor ref={e =&gt; this.editor = e}<br>        uploadPictureConfig={{<br>        action: \'/api/uploadPicture\',//本地图片上传地址<br>        format: this.format//本地图片上传后的url格式化方法<br>        }}/&gt;<br>&lt;div className={style[\'editor-container\']}&gt;<br>     &lt;article ref={e =&gt; this.showContent = e} className={EditorStyle[\'editor-container\']}&gt;<br>     &lt;/article&gt;<br>&lt;/div&gt;</pre><h5><br></h5><h6>三、API</h6><p><br></p><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>Editor.val(value:string) 获取/设置编辑器的值</p></blockquote><blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><p>value为空则返回编辑器的值，不为空则设置编辑器的值。</p></blockquote>');
         this.getContent();
     }
 

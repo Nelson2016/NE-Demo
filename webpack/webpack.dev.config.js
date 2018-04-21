@@ -48,7 +48,7 @@ module.exports = {
             //编译通过import动态引入的scss/css
             {
                 test: /\.(css|scss)?$/,
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 use: extractTextPlugin.extract({
                     fallback: 'isomorphic-style-loader',
                     use: [
