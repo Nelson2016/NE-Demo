@@ -78,7 +78,7 @@ module.exports = {
                         options: {
                             limit: 10000,
                             name: "[hash:8].[ext]",
-                            publicPath: '/',
+                            publicPath: 'images/',
                             outputPath: 'images/',
                         },
                     },

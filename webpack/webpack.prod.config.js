@@ -32,7 +32,7 @@ const baseConfig = {
             //编译通过import动态引入的scss/css
             {
                 test: /\.(css|scss)?$/,
-                exclude: /node_modules/,
+                // exclude: /node_modules/,
                 use: extractTextPlugin.extract({
                     fallback: 'isomorphic-style-loader',
                     use: [
@@ -62,7 +62,7 @@ const baseConfig = {
                         options: {
                             limit: 10000,
                             name: "[hash:8].[ext]",
-                            publicPath: '/',
+                            publicPath: 'images/',
                             outputPath: 'images/',
                         },
                     },
@@ -122,10 +122,9 @@ function getPlugins() {
 
 //排除扩展包
 function getExternals() {
-    console.log(path.resolve(__dirname, '../node_modules'))
     return fs.readdirSync(path.resolve(__dirname, '../node_modules'))
         .filter(filename => {
-            return !filename.includes('.bin') && filename !== 'nr';
+            return !filename.includes('.bin') && filename !== 'nelson-editor';
         })
         .reduce((externals, filename) => {
             externals[filename] = `commonjs ${filename}`;

@@ -4,7 +4,7 @@ export default {
     debug: isDev,
 
     dev: {
-        port: 3030,
+        port: 3000,
     },
     prod: {
         port: 8090
